@@ -212,10 +212,11 @@
         // 3. تحديث رابط المشاركة (مرة واحدة فقط)
         window.onload = function() {
             const currentUrl = window.location.href;
-            const text = "قال رسول الله ﷺ: 'خياركم من تعلم القرآن وعلمه'.\nإليك إذاعة القرآن الكريم تعمل 24 ساعة مع سبحة إلكترونية.\nاجعلها صدقة جارية عندك:\n" + currentUrl + "\n\nأخوكم Sameh elRawy";
+            const text = "قال رسول الله ﷺ: 'خيركم من تعلم القرآن وعلمه'.\nإليك إذاعة القرآن الكريم تعمل 24 ساعة مع سبحة إلكترونية.\nاجعلها صدقة جارية عندك:\n" + currentUrl + "\n\nأخوكم Sameh elRawy";
             const msg = encodeURIComponent(text);
             document.getElementById('waShare').href = "https://wa.me/?text=" + msg;
         }
     </script>
 </body>
 </html>
+
