@@ -10,18 +10,18 @@
     <meta property="og:image" content="https://samehelrawy.github.io/Quran_Radio/cover.jpg">
     <meta property="og:url" content="https://samehelrawy.github.io/Quran_Radio/">
     <meta property="og:type" content="website">
-	<link rel="icon" type="image/png" href="https://samehelrawy.github.io/Quran_Radio/cover.jpg">	
+    <link rel="icon" type="image/png" href="https://samehelrawy.github.io/Quran_Radio/cover.jpg">    
     <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;400;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E7RK4J5EH4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-  gtag('config', 'G-E7RK4J5EH4');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E7RK4J5EH4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-E7RK4J5EH4');
+    </script>
+
     <style>
         :root {
             --accent-color: #f1c40f;
@@ -38,57 +38,58 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: flex-start; /* يبدأ من فوق */
+            justify-content: flex-start;
             min-height: 100vh;
             margin: 0;
-            padding: 40px 20px; /* مسافة من أعلى الصفحة */
+            padding: 40px 20px;
             color: var(--text-color);
             box-sizing: border-box;
             text-align: center;
         }
-/* تصميم صندوق السبحة والعداد */
-.tasbih-box { 
-    background: rgba(255, 255, 255, 0.05); 
-    padding: 20px; 
-    border-radius: 20px; 
-    border: 1px dashed #f1c40f; 
-    margin: 20px 0; 
-}
 
-.counter { 
-    font-size: 3rem; 
-    font-weight: bold; 
-    color: #f1c40f; 
-    display: block; 
-    margin: 10px 0; 
-}
+        .tasbih-box { 
+            background: rgba(255, 255, 255, 0.05); 
+            padding: 20px; 
+            border-radius: 20px; 
+            border: 1px dashed #f1c40f; 
+            margin: 20px 0; 
+            width: 100%;
+            max-width: 400px;
+        }
 
-.btn-tasbih { 
-    background: #f1c40f; 
-    color: #1a2a6c; 
-    border: none; 
-    padding: 15px 30px; 
-    border-radius: 50px; 
-    font-weight: bold; 
-    font-size: 1.2rem; 
-    cursor: pointer; 
-    transition: 0.3s; 
-    width: 100%; 
-}
+        .counter { 
+            font-size: 3rem; 
+            font-weight: bold; 
+            color: #f1c40f; 
+            display: block; 
+            margin: 10px 0; 
+        }
 
-.btn-tasbih:active { 
-    transform: scale(0.95); 
-}
+        .btn-tasbih { 
+            background: #f1c40f; 
+            color: #1a2a6c; 
+            border: none; 
+            padding: 15px 30px; 
+            border-radius: 50px; 
+            font-weight: bold; 
+            font-size: 1.2rem; 
+            cursor: pointer; 
+            transition: 0.3s; 
+            width: 100%; 
+        }
 
-.btn-reset { 
-    background: transparent; 
-    color: #ccc; 
-    border: none; 
-    margin-top: 10px; 
-    cursor: pointer; 
-    text-decoration: underline; 
-    font-size: 0.8rem; 
-}
+        .btn-tasbih:active { transform: scale(0.95); }
+
+        .btn-reset { 
+            background: transparent; 
+            color: #ccc; 
+            border: none; 
+            margin-top: 10px; 
+            cursor: pointer; 
+            text-decoration: underline; 
+            font-size: 0.8rem; 
+        }
+
         h1 { 
             font-family: 'Amiri', serif; 
             font-size: 3rem; 
@@ -101,7 +102,6 @@
             font-size: 1.2rem; 
             margin-bottom: 30px; 
             opacity: 0.9;
-            text-shadow: 0 2px 5px rgba(0,0,0,0.5);
         }
 
         .player-wrapper { 
@@ -127,54 +127,28 @@
             width: 100%; min-height: 60px; margin: 15px 0; border-radius: 15px;
             text-decoration: none; font-weight: bold; font-size: 1.1rem;
             transition: all 0.3s ease; border: 1px solid rgba(255,255,255,0.1); cursor: pointer;
-            backdrop-filter: blur(5px);
         }
 
         .btn span { margin-left: 10px; font-size: 1.4rem; }
         .btn-download { background: var(--btn-blue); color: white; }
         .btn-whatsapp { background: var(--btn-green); color: white; }
-
         .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
 
-        .qr-section {
-            margin-top: 40px;
-            padding: 15px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 20px;
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .qr-section p { font-size: 0.9rem; margin-bottom: 15px; color: var(--accent-color); }
+        .footer { margin-top: 30px; width: 100%; max-width: 400px; }
         
-        #qrcode img {
-            margin: 0 auto;
-            border: 10px solid white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-
-        .footer { 
-            margin-top: 30px; 
-            padding-top: 20px;
-            width: 100%;
-            max-width: 400px;
-        }
-
-        .name { 
+        .name-link {
             color: var(--accent-color); 
             font-weight: bold; 
-            display: block; 
-            margin-top: 8px; 
+            text-decoration: none;
             font-size: 1.3rem;
-            text-shadow: 0 2px 5px rgba(0,0,0,0.5);
         }
+        .name-link i { color: #25D366; margin-left: 5px; }
 
         @media (max-width: 400px) {
             h1 { font-size: 2.2rem; }
             .subtitle { font-size: 1rem; }
         }
     </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 </head>
 <body>
 
@@ -186,28 +160,45 @@
             <source src="https://n0c.radiojar.com/8s5u5tpdtwzuv?rj-ttl=5&rj-tok=AAABm9N_wNMA3y2wAA2AtSfjcA" type="audio/mpeg">
         </audio>
     </div>
-<div class="tasbih-box">
-    <p style="margin:0; font-size: 0.9rem;">السبحة الإلكترونية</p>
-    <span id="count" class="counter">0</span>
-    <button class="btn-tasbih" onclick="increment()">اضغط للتسبيح</button>
-    <button class="btn-reset" onclick="reset()">تصفير العداد</button>
-</div>
+
+    <div class="tasbih-box">
+        <p style="margin:0; font-size: 0.9rem;">السبحة الإلكترونية</p>
+        <span id="count" class="counter">0</span>
+        <button class="btn-tasbih" onclick="increment()">اضغط للتسبيح</button>
+        <button class="btn-reset" onclick="reset()">تصفير العداد</button>
+    </div>
+
     <div class="btn-container">
         <button onclick="downloadM3U()" class="btn btn-download"><span>⬇️</span> تحميل ملف الراديو (M3U)</button>
-        <a id="waShare" href="#" class="btn btn-whatsapp"><span>📱</span> مشاركة عبر الواتساب</a>
+        <a id="waShare" href="#" class="btn btn-whatsapp" target="_blank"><span>📱</span> مشاركة عبر الواتساب</a>
     </div>
 
     <div class="footer">
-<div class="signature">
-    صدقة جارية من أخوكم
-    <a href="https://wa.me/201000677200" class="name-link" target="_blank">
-        <i class="fab fa-whatsapp"></i> Sameh elRawy
-    </a>
-</div>
-
-    <img src="https://profile-counter.glitch.me/SamehElrawy-Quran/count.svg" style="display:none">
+        <div class="signature">
+            صدقة جارية من أخوكم
+            <a href="https://wa.me/201000677200" class="name-link" target="_blank">
+                <i class="fab fa-whatsapp"></i> Sameh elRawy
+            </a>
+        </div>
+    </div>
 
     <script>
+        // 1. برمجة عداد السبحة
+        let count = 0;
+        function increment() {
+            count++;
+            document.getElementById('count').innerText = count;
+            if (window.navigator.vibrate) window.navigator.vibrate(50); 
+        }
+
+        function reset() {
+            if(confirm("هل تريد تصفير العداد؟")) {
+                count = 0;
+                document.getElementById('count').innerText = count;
+            }
+        }
+
+        // 2. تحميل ملف الراديو
         function downloadM3U() {
             const m3uContent = `#EXTM3U\n#EXTINF:-1, إذاعة القرآن الكريم - Sameh elRawy\nhttps://n0c.radiojar.com/8s5u5tpdtwzuv?rj-ttl=5&rj-tok=AAABm9N_wNMA3y2wAA2AtSfjcA`;
             const blob = new Blob([m3uContent], { type: 'audio/x-mpegurl' });
@@ -215,56 +206,16 @@
             const a = document.createElement('a');
             a.href = url;
             a.download = 'Quran_Radio_Sameh.m3u';
-            document.body.appendChild(a);
             a.click();
-            document.body.removeChild(a);
         }
 
+        // 3. تحديث رابط المشاركة (مرة واحدة فقط)
         window.onload = function() {
-            new QRCode(document.getElementById("qrcode"), {
-                text: "https://samehelrawy.github.io/Quran_Radio/",
-                width: 140,
-                height: 140,
-                colorDark : "#000000",
-                colorLight : "#ffffff",
-                correctLevel : QRCode.CorrectLevel.H
-            });
-
-const msg = encodeURIComponent("قال رسول الله ﷺ: 'خياركم من تعلم القرآن وعلمه'.\nإليك إذاعة القرآن الكريم تعمل 24 ساعة مع سبحة إلكترونية.\nاجعلها صدقة جارية عندك:\n" + url + "\n\nأخوكم Sameh elRawy");            document.getElementById('waShare').href = "https://wa.me/?text=" + msg;
-
+            const currentUrl = window.location.href;
+            const text = "قال رسول الله ﷺ: 'خياركم من تعلم القرآن وعلمه'.\nإليك إذاعة القرآن الكريم تعمل 24 ساعة مع سبحة إلكترونية.\nاجعلها صدقة جارية عندك:\n" + currentUrl + "\n\nأخوكم Sameh elRawy";
+            const msg = encodeURIComponent(text);
+            document.getElementById('waShare').href = "https://wa.me/?text=" + msg;
         }
     </script>
-	<script>
-    // برمجة عداد السبحة
-    let count = 0;
-    function increment() {
-        count++;
-        document.getElementById('count').innerText = count;
-        // اهتزاز خفيف للموبايل عند كل تسبيحة
-        if (window.navigator.vibrate) window.navigator.vibrate(50); 
-    }
-
-    function reset() {
-        if(confirm("هل تريد تصفير العداد؟")) {
-            count = 0;
-            document.getElementById('count').innerText = count;
-        }
-    }
-
-    // تحديث رابط المشاركة تلقائياً
-    window.onload = function() {
-        const url = window.location.href;
-        const msg = encodeURIComponent("صدقة جارية: إذاعة القرآن الكريم تعمل 24 ساعة مع سبحة إلكترونية.\nاجعلها صدقة جارية عندك:\n" + url + "\n\nأخوكم Sameh elRawy");
-        document.getElementById('waMsg').href = "https://wa.me/?text=" + msg;
-    }
-</script>
 </body>
 </html>
-
-
-
-
-
-
-
-
