@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إذاعة القرآن الكريم - صدقة جارية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-bg: #1a2a6c; /* Deep Blue */
+            --secondary-bg: #2b3b8c;
+            --accent-color: #f1c40f; /* Golden Yellow */
+            --text-color: #ecf0f1;
+            --btn-whatsapp: #25D366;
+            --btn-download: #3498db; /* Sky Blue for download */
+            --card-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+            --card-border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background: linear-gradient(135deg, var(--primary-bg) 0%, var(--secondary-bg) 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.08); /* Semi-transparent background */
+            backdrop-filter: blur(20px); /* Glassmorphism effect */
+            border-radius: 30px;
+            padding: 30px;
+            box-shadow: var(--card-shadow);
+            text-align: center;
+            width: 90%;
+            max-width: 450px;
+            border: var(--card-border);
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-family: 'Amiri', serif;
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            color: var(--accent-color);
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 35px;
+            color: rgba(var(--text-color), 0.9);
+        }
+
+        .player-box {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 18px;
+            border-radius: 20px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        audio {
+            width: 100%;
+            height: 40px;
+            filter: invert(100%) hue-rotate(180deg) brightness(1.5); /* Modern audio player look */
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            padding: 16px;
+            margin: 15px 0;
+            border-radius: 18px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+
+        .btn-download {
+            background: var(--btn-download);
+            color: #fff;
+        }
+
+        .btn-whatsapp {
+            background: var(--btn-whatsapp);
+            color: #fff;
+        }
+
+        .footer-text {
+            font-size: 0.9rem;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: var(--card-border);
+            color: rgba(var(--text-color), 0.8);
+        }
+
+        .signature {
+            font-size: 1rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-top: 5px;
+            display: block;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px;
+                border-radius: 20px;
+            }
+            h1 { font-size: 2.2rem; }
+            .subtitle { font-size: 1rem; }
+            .btn { font-size: 1rem; padding: 14px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>إذاعة القرآن الكريم</h1>
+        <p class="subtitle">بث مباشر على مدار الساعة - صدقة جارية</p>
+        
+        <div class="player-box">
+            <audio controls preload="none">
+                <source src="https://n0c.radiojar.com/8s5u5tpdtwzuv?rj-ttl=5&rj-tok=AAABm9N_wNMA3y2wAA2AtSfjcA" type="audio/mpeg">
+                عذراً، متصفحك لا يدعم مشغل الصوت المباشر.
+            </audio>
+        </div>
+
+        <button onclick="downloadM3U()" class="btn btn-download">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            تحميل ملف الراديو (M3U)
+        </button>
+
+        <a id="whatsappShareBtn" href="#" class="btn btn-whatsapp" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-share-2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+            شاركها كصدقة جارية على واتساب
+        </a>
+
+        <div class="footer-text">
+            نسألكم الدعاء..
+            <br>
+            صدقة جارية من أخوكم
+            <span class="signature">Sameh elRawy</span>
+        </div>
+    </div>
+
+    <script>
+        // دالة تحميل ملف الـ M3U
+        function downloadM3U() {
+            // رابط البث المباشر
+            const radioStreamUrl = "https://n0c.radiojar.com/8s5u5tpdtwzuv?rj-ttl=5&rj-tok=AAABm9N_wNMA3y2wAA2AtSfjcA";
+            // محتوى ملف M3U
+            const m3uContent = `#EXTM3U\n#EXTINF:-1, إذاعة القرآن الكريم - Sameh elRawy\n${radioStreamUrl}`;
+            
+            // إنشاء Blob من المحتوى
+            const blob = new Blob([m3uContent], { type: 'audio/x-mpegurl' });
+            const url = window.URL.createObjectURL(blob);
+            
+            // إنشاء عنصر تحميل (a) لتشغيل التحميل
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Quran_Radio_Sameh.m3u'; // اسم الملف اللي هيتحمل
+            document.body.appendChild(a);
+            a.click();
+            
+            // تنظيف بعد التحميل
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }
+
+        // تحديث رابط الواتساب تلقائياً باللينك الحالي للصفحة
+        window.onload = function() {
+            const currentUrl = window.location.href;
+            const message = encodeURIComponent(`شارك في الأجر والثواب: استمع إلى إذاعة القرآن الكريم بث مباشر 24 ساعة بصوت نقي جداً، أو حمل ملف الراديو الثابت على جوالك:\n\n${currentUrl}\n\nصدقة جارية من أخوكم Sameh elRawy`);
+            document.getElementById('whatsappShareBtn').href = `https://wa.me/?text=${message}`;
+        }
+    </script>
+
+</body>
+</html>
